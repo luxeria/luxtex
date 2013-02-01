@@ -1,0 +1,63 @@
+\documentclass{beamer}
+
+\usepackage{luxbeamer}
+
+\title{LuXBeamer}
+\subtitle{Ein Minimalbeispiel}
+\author{Ervin Mazlagi\'c}
+
+\begin{document}
+
+\maketitle
+
+
+\section{Programm}
+\begin{frame}
+\tableofcontents
+\end{frame}
+
+\section{Slide-Grundlagen}
+
+\subsection{Blöcke}
+
+%%%%% ein Slide
+\begin{frame}
+	\frametitle{Blöcke \hfill \footnotesize{LuXeria}}
+	\framesubtitle{Standardblöcke im Vergleich \hfill \tiny{OpenSource --- Open Mind!}}
+	
+	\begin{block}{Regulärer Block}
+		Das ist ein regulärer Block.
+	\end{block}
+
+	\begin{alertblock}{Alarmblock}
+		Das ist ein Alarmblock.
+	\end{alertblock}
+
+	\begin{exampleblock}{Beispielblock}
+		Das ist ein Beispielblock.
+	\end{exampleblock}
+\end{frame}
+
+\subsection{Kolonnen}
+
+\begin{frame}
+	\frametitle{Slides splaten \hfill \footnotesize{LuXeria}}
+	\framesubtitle{Vertikale Trennung \hfill \tiny{OpenSource}}
+
+	\begin{columns}
+		\begin{column}{5cm}
+			\begin{block}{Links}
+				Linke Kolonne
+			\end{block}
+		\end{column}
+		\begin{column}{5cm}
+			\begin{block}{Rechts}
+				Rechte Kolonne
+			\end{block}
+		\end{column}
+	\end{columns}
+\end{frame}
+
+
+
+\end{document}
