@@ -1,0 +1,116 @@
+\documentclass[a4paper,
+               10pt,
+               fleqn]{article}
+
+\author{Ervin Mazlagic}
+\title{Paper Manual}
+
+\usepackage{luxpaper}
+\usepackage{luxtitle}
+ 
+\begin{document}
+\luxtitle{Papers}
+         {LuXPaper Manual}
+         {Ervin Mazlagi\'c}
+         {Adligenswil}
+         {2012}
+
+\tableofcontents
+\newpage
+
+\section{Einleitung}
+Das Package ``luxpaper'' ist die Wahl, wenn es darum geht 
+eine Dokumentation oder Arbeit zu schreiben.
+In diesem Package sind alle gängigen Deklarationen vorhanden
+wie etwa die Spracheinstellung, Seiteneinzüge, Kopf- und
+Fusszeilendeklarationen etc.
+Spezielle Packages die über den Alltagsgebrauch hinaus gehen
+sind ebenfalls bereits enthalten (TikZ, PGF-PIE, CircuiTikZ etc.).
+Das lstlistings-Package\footnote{
+    Das Package ``lstlistings'' ist jenes, welches benutzt wird um
+    SourceCode in ein Dokument einzubinden.}
+wird separat behandelt in diesem Manual (siehe Kapitel 
+%\ref{sec:lstlisting}).
+
+Dieses Manual soll das Package in seiner Gesamtheit dokumentieren
+und Anweisungen für den Gebrauch liefern.
+
+\section{Regeln \& Konventionen}
+In der Welt der Coder sind Spielregeln und Konventionen nichts 
+besonderes. Jedoch liefern diese den Stoff zum Cyber-Krieg
+(Stihwort K\&R vs. \dots). 
+
+Hier sollen wirklich nur funktional relevante Konventionen
+aufgestellt und keine Style-Diktatur betrieben werden.
+
+\subsection{Header}
+Das Main File eines Dokumentes für ``LuXeria Papers'' muss den 
+folgenden Header aufweisen.
+
+\begin{lstlisting}
+\documentclass[a4paper,             % Papierformat      DIN A4
+               10pt,                % Schriftgrösse     10pt
+               fleqn]               % Formelausrichtung fleqn
+               {article}            % Klasse            article
+
+\author{Vorname Nachname}
+\title{Titel der Arbeit}
+
+\usepackage{luxpaper}
+\usepackage{luxtitle}
+
+\begin{document}
+    
+    \luxtitle{Klasse}               % Art der Arbeit (Paper, Report...)
+             {Titel}                % Titel der Arbeit
+             {Autor}                % Verfasser der Arbeit
+             {Ort}                  % Ort (Adligenswil)
+             {Jahr}                 % Jahr des Verfassens
+
+    \tableofcontents                % Inhaltsverzeichnis
+    \newpage                        % Seitenumbruch
+
+    % Inhalt folt an dieser Stelle bis zum \end{document}
+
+\end{document}
+\end{lstlisting}
+
+\noindent
+Zwischen dem \lstinline$\usepackage{luxtitle}$ in Zeile 10 und 
+den \lstinline$\begin{document}$ in Zeile 12 können weitere
+Packages geladen werden. Wichtig ist, das die zwei hier genannten
+Packages als erste einbezogen werden.
+
+\section{Package}
+Das ``luxpaper''-Package muss bei einem neuen Dokument angepasst
+werden. Nämlich an folgenden Stellen:
+
+\begin{itemize}
+    \item Kopfzeile Links \hfill (Zeile 18)
+    \item Fusszeile Links \hfill (Zeile 22)
+\end{itemize}
+
+\noindent
+Dort ist jeweils der korrekte Inhalt einzufügen (Titel der Arbeit und der
+Name des Autors).
+
+\lstinputlisting[firstline=109, lastline=134]{luxpaper.sty}
+
+\subsection{Source}
+Die Source zum Package ist auf \url{www.gihub.com/luxeria/luxtex}
+hinterlegt.
+
+\section{Titelseite}
+Das Titelseiten-Package ``luxtitle'' ermöglicht ein genormetes 
+Titelblatt für die LuXeria. Dieses stellt ein LaTeX-Commando 
+zur Verfügung mit 5 Parametern.
+
+\begin{lstlisting}
+\luxtitle{Klasse}   % Klasse der Arbeit (Paper, Report...)
+         {Titel}    % Titel der Arbeit
+         {Autor}    % Autor der Arbeit
+         {Ort}      % Ort des Verfassens
+         {Jahr}     % Jahr des Verfassens
+\end{lstlisting}
+
+\end{document}

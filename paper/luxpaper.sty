@@ -1,0 +1,134 @@
+%%%%% Beschreibung
+% Dies ist das luxeria latex-style-template für paper.
+
+%%%%% Seiteneinstellung (MUSS IN DAS MAIN!)
+%\documentclass[a4paper,     % Seitengrösse DIN A4
+%               10pt,        % Schriftgrösse 10pt
+%               fleqn]{      % Formelausrichtung
+%               article}     % Klasse = Artikel
+               
+%%%%% Encoding
+\usepackage[utf8]{inputenc} % Schriftcodierung Unicode
+\usepackage[T1]{fontenc}    %
+\usepackage{textcomp}       % erweiterung von "fontenc"
+\usepackage{lmodern}        % 
+\usepackage{courier}        % Courier-Font wird neutzt für Listings
+
+%% In Ausnahmefällen müssen Umlaute ein "Pre-Render" durchlaufen
+%\PrerenderUnicode{ä}
+%\PrerenderUnicode{ü}
+%\PrerenderUnicode{ö}
+
+%%%%% Sprache
+\usepackage[ngerman]{babel}        % neue deutsche Rechtschreibung
+
+%%%%% Grafik, Bilder & Zeichnungen
+\usepackage{tikz}           % wird benutzt für Zeichnungen (allg.)
+\usepackage[european        % Euröpäische Symbole verwenden
+           ]{circuitikz}    % wird benutzt für Schaltungen (ET)
+\usepackage{bchart}         % Bar-Chart
+%\usepackage{pgf-pie}        % Pie-Chart (manuell downloaden!)
+\usepackage{graphics}       % Bilder
+\usepackage{graphicx}       % Bilder II
+
+%%%%% Links 
+\usepackage{hyperref}       % Ermöglicht Hyperlinks
+
+%%%%% Mathematik
+\usepackage{amsmath}        % Mathematik (allg.)
+\usepackage[all             %
+            ]{xy}           % Erweiterung für Graphen
+
+%%%%% Glossarpakete
+\usepackage[xindy           %
+            ]{glossaries}   %
+\usepackage{makeidx}        %
+
+%%%%% PDF-Management
+\usepackage{pdfpages}       % Ermöglicht Einbinden von PDF etc.
+
+%%%%% Source-Code Paket
+\definecolor{darkgreen}{rgb}{0,0.6,0}   % Farb-Definition
+
+\usepackage{listings}       % Source-Code Paket
+
+\lstset{language=[LaTeX]TeX}                % Sprache definieren
+\lstloadlanguages{TeX}                      % Optionen/Settings laden
+\lstset{basicstyle=\ttfamily,               % Schriftstyle definieren
+        numbers=left,                       % Seite der Zeilennummerierung
+        numberstyle=\tiny,                  % Grösse der Zeilennummerierung
+        numbersep=5pt,                      % ?
+        breaklines=true,                    % Umbrüche übernehmen
+        %texcsstyle=\color{black},           % Farbe von Code
+        %backgroundcolor=\color{gray!10},    % Farbe von Hintergrund
+        %commentstyle=\color{darkgreen},     % Farbe von Kommentar
+        %keywordstyle=\color{red}\bfseries, % Farbe von Schlüsselwörtern
+        stringstyle=\color{blue}\bfseries, % Farbe von Strings
+        frame=single,                       % Einrahmung (einfach)
+        tabsize=2,                          % Tab-Weite
+        %rulecolor=\color{black!30},         % 
+        title=\lstname,                     % Titel = Name vom Source
+        escapeinside={\%*}{*)},             % 
+        breakatwhitespace=true,             % 
+        framextopmargin=2pt,                % 
+        framexbottommargin=2pt,             % 
+        inputencoding=utf8,                 % encoding = utf8
+        extendedchars=true,                 % 
+        literate={Ö}{{\"O}}1                % Umlaute ermöglichen im Source
+                 {Ä}{{\"A}}1                % 
+                 {Ü}{{\"U}}1                % 
+                 {ü}{{\"u}}1                % 
+                 {ä}{{\"a}}1                % 
+                 {ö}{{\"o}}1 }
+%%%%% 
+\usepackage{printlen}
+
+%%%%% Lorem Ipsum, Blindtext
+\usepackage{lipsum}         % generiert Lorem Ipsum Text
+\usepackage{blindtext}      % generiert korrekten Text (dt, en etc.)
+
+%%%%% Euro-Zeichen
+\usepackage{eurosym}        % wird Benutzt für das Währungszeichen "Euro"
+
+%%%%% Abkürzungen
+\usepackage{acronym}        % Ermöglicht Abkürzungs-Managemnt (+ Verzeichnis)
+
+%%%%% Auflistung alphabetisiert
+\usepackage{enumitem}
+
+%%%%% URL
+\usepackage{url}            % ermöglicht korrekte Darstellung von URLs
+
+%%%%% Zitieren
+\usepackage{cite}           % Ermöglicht Zitate
+\usepackage{apacite}        % Zitat-Style APA-Norm
+
+%%%%% Kopf- und Fusszeilen
+\usepackage{fancyhdr}       % Grundpaket für Kopf- und Fusszeilen
+
+%%%%% LuXeria Kopf- und Fusszeilen
+\pagestyle{fancy}           % deklariere "eigenen style" (fancy)
+\fancyhf{}                  % verwerfe bisherigen style
+
+\addtolength{\textwidth}{3cm}        % Textbreite um 3cm
+\addtolength{\evensidemargin}{-15mm} % Einzug ger. Seiten um -15mm
+\addtolength{\oddsidemargin}{-15mm}  % Einzug unger. Seiten um -15mm
+
+\renewcommand{\sectionmark}[1]{\markright{#1}{}}
+
+\addtolength{\headwidth}{3cm}        % Kopfzeilenbreite um 3cm
+\addtolength{\headheight}{1cm}       % Kopfzeilenhöhe um 1cm
+\addtolength{\textheight}{2cm}       % Texthöhe um 2cm
+\addtolength{\voffset}{-2cm}         % Einzug Vertikal um -2cm
+
+\renewcommand{\headrulewidth}{0.4pt}    % Kopfzeilenlinie
+
+\fancyhead[L]{\textbf{LuXPaper Manual}}	% = Titel der Arbeit
+\fancyhead[C]{}
+\fancyhead[R]{\includegraphics[scale=0.2]{lux_logo.png}}
+
+\fancyfoot[L]{Ervin Mazlagic}         	% = Name des Autors
+\fancyfoot[C]{\today}                 	% = Datum (heute)
+\fancyfoot[R]{\thepage}               	% = Seitenzahl
+
+\renewcommand{\footrulewidth}{0.4pt}	% Fusszeilenlinie
