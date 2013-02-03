@@ -1,0 +1,12 @@
+\documentclass[a4paper, 10pt, fleqn]{article}
+
+\usepackage{pdfpages}
+
+\begin{document}
+
+
+\includepdf[pages=-]{seriebrief_1.pdf}
+\includepdf[pages=-]{seriebrief_2.pdf}
+\includepdf[pages=-]{seriebrief_3.pdf}
+\includepdf[pages=-]{seriebrief_4.pdf}
+

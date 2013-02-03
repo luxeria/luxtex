@@ -1,0 +1,30 @@
+% Betreff des Schreibens
+\Betreff {Info zum LuXLetter}
+
+% Datum des Schreibens
+\Datum {\today}
+
+% Unterschrift des Schreibers
+\Unterschrift {Vereinspräsident\\Ervin Mazlagi\'c}
+
+% Anrede & Gruss
+\Anrede {Sehr geehrter Herr Empfängermann,}
+\Gruss {Mit freundlichem Gruss}{1cm}
+
+% Anhang/Anlagen
+\Anlagen {LuXLetter-Source\\
+                 LuXeria Flyer}
+
+%%%%% Der eigentliche Brief mit Inhalt
+% Briefinhalt
+\begin{document}
+\begin{g-brief}
+mit Freude darf ich Ihnen mitteilen, dass LuXeria
+nun ein eigenes Template hat für das erstellen
+von Geschäftsbriefen.
+
+Ich hoffe Sie werfen einen Blick auf die beiligende
+Source und besuchen uns demnächst mal an unseren
+Vereinsabenden in Adligenswil (siehe Flyer).
+\end{g-brief}
+\end{document}
