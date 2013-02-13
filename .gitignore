@@ -1,2 +1,4 @@
-lux_logo_draw.tex
-lux_logo_draw.png
+*.aux
+*.log
+*.out
+*.toc
